@@ -2,16 +2,24 @@
   height: fit-content;
   background-color: #242424;
   text-align: center;
+  margin-top: 2rem;
 }
 
 .footer__text {
   color: #ffeccc;
-  width: 50%;
-  font-size: 2rem;
+  width: 90%;
+  font-size: 3.2rem;
   margin: 0 auto;
   padding: 2rem;
 }
 
 .footer__logos > *:not(:last-child) {
   margin-right: 1rem;
+}
+
+@media only screen and (max-width: 28.7em) {
+  .footer__text {
+    font-size: 2.2rem;
+    padding: 1rem;
+  }
 }

@@ -33,4 +33,12 @@ app.get('/api/css', (req, res) => {
   res.send({ flashcards: css });
 });
 
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, 'client/build')));
+  app.get('*', function(req, res) {
+    res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+  });
+}
+
+
 app.listen(port, () => console.log(`Hey, this is server.js listening on port ${port}!`));

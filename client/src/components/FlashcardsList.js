@@ -35,7 +35,7 @@ class FlashcardsList extends Component {
     function sliceArray(array, prevNumber, number) {
       return array.slice(prevNumber, prevNumber + number)
     }
-    // this.state.toShuffle && shuffleArray(this.state.arrayOfCards)
+    this.state.toShuffle && shuffleArray(this.state.arrayOfCards)
     let cards = sliceArray(this.state.arrayOfCards, this.state.batch, 6)
    
     return (
