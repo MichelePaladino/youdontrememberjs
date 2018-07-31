@@ -1,0 +1,17 @@
+.footer {
+  height: fit-content;
+  background-color: #242424;
+  text-align: center;
+}
+
+.footer__text {
+  color: #ffeccc;
+  width: 50%;
+  font-size: 2rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.footer__logos > *:not(:last-child) {
+  margin-right: 1rem;
+}

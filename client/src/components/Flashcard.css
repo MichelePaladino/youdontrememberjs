@@ -1,0 +1,49 @@
+/* 
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  line-height: none;
+}
+
+.flex-container--start {
+  align-items: flex-start;
+} */
+
+.flashcard {
+  /* max-width: 40vw; */
+  flex: 1 0 40vw;
+  box-shadow: 0px 4px 22px 0px rgba(0, 0, 0, 0.405);
+  padding: 2rem;
+  margin: 3rem;
+
+  position: relative;
+  cursor: pointer;
+}
+
+.flashcard__logo {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.flashcard__btn {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.flashcard__text {
+  font-size: 2rem;
+}
+
+
+.flashcard__text > *:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.flashcard__title {
+  font-size: 2.5rem;
+}

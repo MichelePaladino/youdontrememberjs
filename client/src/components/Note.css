@@ -1,0 +1,91 @@
+.note-box {
+  box-shadow: 0px 4px 22px 0px rgba(0, 0, 0, 0.405);
+  width: 85%;
+  margin: 4rem auto;
+  padding: 3rem 5rem;
+
+  font-size: 2rem;
+
+  position: relative;
+}
+.note-box > *:last-child {
+ margin-top: 1rem;
+}
+
+.note-box__title {
+  font-size: 3rem;
+}
+
+.note-box__text {
+  font-size: 2.5rem;
+  padding-top: 2rem;
+}
+
+.note-box__buttons {
+  text-align: center;
+}
+.note-box__buttons > * {
+  margin: 1rem;
+}
+
+.note-box__button {
+  background: none;
+  outline: none;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 0.5rem 4rem;
+  border-radius: 20px;
+  box-shadow: 0px 5px 5px 0px rgb(73, 73, 73); 
+  overflow: visible;
+  transition: all 0.3;
+  font-size: 1.6rem;
+}
+
+.note-box__mid-button {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -65%);
+  z-index: 200%;
+}
+
+.note-box__button:hover {
+  box-shadow: 0px 4px 5px 0px rgb(94, 94, 94); 
+  transform: translateY(-1px) scale(1);
+}
+.note-box__button:active {
+  box-shadow: 0px 1px 5px 0px rgba(130,130,130,1); 
+  transform: translateY(0px) scale(1);
+}
+
+.note-box__button--save {
+  background-color: rgba(194, 255, 145, 0.219);
+  border: 2px solid rgba(85, 188, 0, 0.5);
+  color: rgb(70, 155, 0);
+}
+.note-box__button--remove {
+  background-color: rgba(255, 145, 145, 0.219);
+  border: 2px solid rgba(188, 0, 0, 0.5);
+  color: rgb(188, 0, 0);
+}
+.note-box__button--edit {
+  background-color: rgb(219, 224, 255);
+  border: 2px solid rgba(0, 19, 188, 0.5);
+  color: rgb(13, 0, 188);
+}
+
+@media only screen and (max-width: 42em) {
+  .note-box {
+    margin: 3rem auto;
+    padding: 3rem 3rem;
+  } 
+
+  .note-box__title {
+    font-size: 2.5rem;
+  }
+  
+  .note-box__text {
+    font-size: 2rem;
+    padding-top: 1rem;
+  }
+}

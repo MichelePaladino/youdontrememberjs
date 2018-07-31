@@ -1,12 +1,16 @@
 import React, { Component } from "react"
 
+import './Note.css'
+
 class Note extends Component {
 	constructor(props) {
 			super(props)
 			this.state = {
-        id: undefined,
+        id: '',
         title: '',
         text: '',
+        editing: false,
+        init: true,
       }
   }
 
@@ -17,7 +21,7 @@ class Note extends Component {
       const notes = JSON.parse(fetchedNotes)
       notes.forEach(note => {
         if (note.id === this.props.match.params.id) {
-          this.setState({id: note.id, title: note.title, text: note.text})
+          this.setState({id: note.id, title: note.title, text: note.text, init: note.init, editing: note.editing})
         }
       })
     }
@@ -36,28 +40,66 @@ class Note extends Component {
 
   handleSave = (id) => {
       let notes = this.props.notes.filter(note => note.id !== id)
-      notes = notes.concat([{id: this.state.id, title: this.state.title, text: this.state.text}])
+      notes = notes.concat([{id: this.props.match.params.id, title: this.state.title, text: this.state.text, init: false, editing: false}])
       const notesJSON = JSON.stringify(notes)
       localStorage.setItem('notes', notesJSON)
   
       this.props.history.push('/notes')
       this.props.fetchNotes()
-    
   }
 
+  handleRemove = (id) => {
+    const notes = this.props.notes.filter(note => note.id !== id)
+    const notesJSON = JSON.stringify(notes)
+    localStorage.setItem('notes', notesJSON)
+
+    this.props.history.push('/notes')
+    this.props.fetchNotes()
+}
+
 	render() {
+    const editing = this.state.editing;
+    const title = this.state.title;
+    const text = this.state.text;
+    const init = this.state.init;
+    const id = this.props.match.params.id;
+
+    let toShow;
+    if (editing || init) {
+      toShow = (
+        <div className='note-box'>
+          <div>
+            <label for="title">Title</label>
+            <input type="text" name='title' value={title} onChange={this.handleTitle} style={{width:'90%', marginLeft:'2rem'}}/>
+          </div>
+          <div>
+            <label for="text">Text</label>
+            <input type="text" name='text' value={text} onChange={this.handleText} style={{width:'90%', marginLeft:'1.6rem'}}/>
+          </div>
+          <div className='note-box__buttons'>
+            <button className='note-box__button note-box__button--save' onClick={() => {
+                    
+              this.handleSave(id);
+
+            }}>SAVE</button>
+            <button className='note-box__button note-box__button--remove' onClick={() => this.handleRemove(id)}>REMOVE</button>
+          </div>
+         </div>
+      )         
+    } else {
+      toShow = (
+        <div className='note-box'>
+          <div className="note-box__title">{title}</div>
+          <div className="note-box__text">{text}</div>
+          <div className='note-box__mid-button'>
+           <button className='note-box__button note-box__button--edit' onClickCapture={() => this.setState({editing: true})}>EDIT</button>
+          </div>
+        </div>
+      )
+    }
+
     return (
-      <div className='notes'>
-        {/* <h1 className='notes__heading'>NOTES</h1>
-        {this.props.notes.length > 0 && this.props.notes.map((note) => {
-          return <h3 className='notes__title'>{note.titolo}</h3>
-        })} */}
-        ciao! sono una nota! la numero {this.props.match.params.id}
-        <input type="text" value={this.state.title} onChange={this.handleTitle}/>
-        <input type="text" value={this.state.text} onChange={this.handleText}/>
-        <button onClick={() => this.handleSave(this.props.match.params.id)}>SAVE</button>
-        <button onClick={() => console.log("cliccato remove!")}>REMOVE</button>
-      </div>
+        toShow
     )
 	}
 }

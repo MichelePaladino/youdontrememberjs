@@ -6,6 +6,8 @@ import LandingPage from './components/LandingPage'
 import Header from './components/Header'
 import Notes from './components/Notes'
 import Note from './components/Note'
+import NotesPage from './components/NotesPage'
+import Footer from './components/Footer'
 
 class App extends Component {
   constructor(props) {
@@ -15,22 +17,6 @@ class App extends Component {
     }
   }
   componentDidMount() {
-    //// Get the notes from localStorage
-    // const notes = [
-    //   {
-    //     id: 0,
-    //     titolo: 'la mia prima nota nuova'
-    //   },
-    //   {
-    //     id: 1,
-    //     titolo: 'la mia seconda nota'
-    //   },
-    // ]
-    // const notesJSON = JSON.stringify(notes)
-    // localStorage.setItem('notes', notesJSON)
-    // const nuoveNote = localStorage.getItem('notes')
-    // const note = JSON.parse(nuoveNote)
-
     this.fetchNotes()
   }
 
@@ -56,9 +42,10 @@ class App extends Component {
           <Switch>
             <Route path="/" exact render={ props => <LandingPage {...props} notes={this.state.notes} /> }/>
             <Route path="/notes/:id" render={ props => <Note {...props} notes={this.state.notes} fetchNotes={this.fetchNotes} /> }/>
-            <Route path="/notes" render={ props => <Notes {...props} notes={this.state.notes} /> }/>
-            <Route path="/flashcards/:topic" render={ props => <FlashcardsList {...props} notes={this.state.notes}/> }/>
+            <Route path="/notes" render={ props => <NotesPage {...props} notes={this.state.notes} /> }/>
+            <Route path="/flashcards/:topic" render={ props => <FlashcardsList key={Date.now()} {...props} notes={this.state.notes}/> }/>
           </Switch>
+          <Footer/>
         </div>
       </BrowserRouter>
     );
