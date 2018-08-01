@@ -1,6 +1,6 @@
 .hero {
   height: 60vh;
-  background-image: linear-gradient(to right bottom, rgba(46, 46, 46, 0.8), rgba(15, 24, 21, 0.9)), url(../assets/hero.jpg);
+  background-image: linear-gradient(to right bottom, rgba(46, 46, 46, 0.8), rgba(15, 24, 21, 0.9)), url(../assets/heromin.jpg);
   background-size: cover;
   background-position: 0 20%;
   position: relative;
@@ -13,7 +13,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   backface-visibility: hidden;
-  color: #ffeccc;
+  color: #fff2dc;
   /* text-align: center; */
 }
 

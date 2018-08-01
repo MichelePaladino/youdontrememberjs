@@ -70,11 +70,11 @@ class Note extends Component {
         <div className='note-box'>
           <div>
             <label for="title">Title</label>
-            <input type="text" name='title' value={title} onChange={this.handleTitle} style={{width:'90%', marginLeft:'2rem'}}/>
+            <input type="text" name='title' placeholder='Title of your note' value={title} onChange={this.handleTitle} style={{width:'90%', height:'30px', marginLeft:'2rem'}}/>
           </div>
           <div>
             <label for="text">Text</label>
-            <input type="text" name='text' value={text} onChange={this.handleText} style={{width:'90%', marginLeft:'1.6rem'}}/>
+            <input type="text" name='text' placeholder='Text of your note' value={text} onChange={this.handleText} style={{width:'90%', height:'30px', marginLeft:'1.7rem'}}/>
           </div>
           <div className='note-box__buttons'>
             <button className='note-box__button note-box__button--save' onClick={() => {

@@ -4,7 +4,6 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import FlashcardsList from './components/FlashcardsList'
 import LandingPage from './components/LandingPage'
 import Header from './components/Header'
-import Notes from './components/Notes'
 import Note from './components/Note'
 import NotesPage from './components/NotesPage'
 import Footer from './components/Footer'
