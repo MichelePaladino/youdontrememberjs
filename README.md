@@ -1,4 +1,4 @@
-# [You Don't Know JavaScript &rtrie;](https://kine-pop.firebaseapp.com/)
+# [You Don't Remember JavaScript &rtrie;](https://kine-pop.firebaseapp.com/)
 > Flashcards to memorize topics about Javascript, React, Redux, CSS and HTML
 
 Why "You Don't Remember JavaScript"?
@@ -44,11 +44,11 @@ Also, I practiced my React and CSS, and generally all that I learned during the 
 
 **YDRJS on iPad**
 
-![YDRJS on iPad](src/ydrjs.jpg)
+![YDRJS on iPad](client/src/ydrjs.jpg)
 
 **YDRJS on iPhone X**
 
-![YDRJS on iPhone X](src/ydrjsX.jpg)
+![YDRJS on iPhone X](client/src/ydrjsX.jpg)
 
 ## Dependencies
 
