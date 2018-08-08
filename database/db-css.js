@@ -125,9 +125,9 @@ const css = [
   { 
     logo: 'css',
     question: `Which one would you prefer among 'px', 'em' and '%?'`,
-    answer: `<strong>px<strong> gives fine grained control and maintains alignment because 1 px or multiple of 1 px is guaranteed to look sharp. px is not cascade, this means if parent font-size is 20px and child 16px. child would be 16px.
-    <br/><strong>em<strong> maintains relative size. 1em is equal to the current font-size of the element or the browser default. If you set font-size to 16px, then 1em will be equal to 16px. The common practice is to set default body font-size to 62.5% (equal to 10px).
-    <br/><strong>%<strong> sets font-size relative to the font size of the body. Hence, you have to set font-size of the body to a reasonable size. For example, if parent font-size is 20px and child font-size is 50%, child would be 10px.`,
+    answer: `<strong>px</strong> gives fine grained control and maintains alignment because 1 px or multiple of 1 px is guaranteed to look sharp. px is not cascade, this means if parent font-size is 20px and child 16px. child would be 16px.
+    <br/><strong>em</strong> maintains relative size. 1em is equal to the current font-size of the element or the browser default. If you set font-size to 16px, then 1em will be equal to 16px. The common practice is to set default body font-size to 62.5% (equal to 10px).
+    <br/><strong>%</strong> sets font-size relative to the font size of the body. Hence, you have to set font-size of the body to a reasonable size. For example, if parent font-size is 20px and child font-size is 50%, child would be 10px.`,
     reference: `<a rel="noopener noreferrer" target="_blank" href="https://css-tricks.com/the-lengths-of-css/">CSS-TRICKS: Using SVG.</a>`,
     id: 11,
   },
@@ -167,14 +167,6 @@ const css = [
     reference: `<a rel="noopener noreferrer" target="_blank" href="http://nicolasgallagher.com/an-introduction-to-css-pseudo-element-hacks/">nicolasgallagher: An introduction to css pseudo element hacks</a>
     <br/><a rel="noopener noreferrer" target="_blank" href="https://css-tricks.com/css-content/">CSS-TRICKS: CSS content</a>`,
     id: 16,
-  },  
-  { 
-    logo: 'css',
-    question: `How do you align a p center-center inside a div?`,
-    answer: `ANSWER`,
-    reference: `<a rel="noopener noreferrer" target="_blank" href="LINK">SOURCE: ARTICLE</a>
-    <br/><a rel="noopener noreferrer" target="_blank" href="LINK">SOURCE: ARTICLE</a>`,
-    id: 17,
   },  
   { 
     logo: 'css',
