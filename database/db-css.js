@@ -36,7 +36,7 @@ const css = [
   },
   { 
     logo: 'css',
-    question: `What is the CSS display property and can you give a few examples of its use?`,
+    question: `What is the CSS <strong>display</strong> property? Can you give a few examples of its use?`,
     answer: `Every element on a web page is a rectangular box. The display property in CSS determines just how that rectangular box behaves. There are only a handful of values that are commonly used: inline, inline-block, block, none.
     <br/><br/><strong>Inline</strong> is the default value for elements. Think of elements like &lt;span>, &lt;em>, or &lt;b> and how wrapping text in those elements within a string of text doesn't break the flow of the text. An inline element will accept margin and padding, but the element still sits inline as you might expect. Margin and padding will only push other elements horizontally away, not vertically. An inline element will not accept height and width. It will just ignore it.
     <br/><br/>An element set to <strong>inline-block</strong> is very similar to inline in that it will set inline with the natural flow of text (on the "baseline"). The difference is that you are able to set a width and height which will be respected.
@@ -116,52 +116,82 @@ const css = [
   },
   { 
     logo: 'css',
-    question: 'what is this',
-    answer: 'no idea',
-    reference: 'every programmer',
-    id: 2,
+    question: 'What are the benefits of SVG?',
+    answer: `SVG is an image format that is vector based. It's an efficient format for that (small file sizes). You can scale them and they retain their sharpness at any size. You can affect parts of them with CSS and JavaScript as well as SVG specific filters that can do things like blurring.`,
+    reference: `<a rel="noopener noreferrer" target="_blank" href="http://css-tricks.com/using-svg/">CSS-TRICKS: Using SVG.</a>
+    <br/><a rel="noopener noreferrer" target="_blank" href="https://developer.mozilla.org/it/docs/SVG/">MDN: SVG</a>`,
+    id: 10,
   },
   { 
     logo: 'css',
-    question: 'what is destructuring',
-    answer: 'deleting life',
-    reference: 'good vibes',
-    id: 3,
+    question: `Which one would you prefer among 'px', 'em' and '%?'`,
+    answer: `<strong>px<strong> gives fine grained control and maintains alignment because 1 px or multiple of 1 px is guaranteed to look sharp. px is not cascade, this means if parent font-size is 20px and child 16px. child would be 16px.
+    <br/><strong>em<strong> maintains relative size. 1em is equal to the current font-size of the element or the browser default. If you set font-size to 16px, then 1em will be equal to 16px. The common practice is to set default body font-size to 62.5% (equal to 10px).
+    <br/><strong>%<strong> sets font-size relative to the font size of the body. Hence, you have to set font-size of the body to a reasonable size. For example, if parent font-size is 20px and child font-size is 50%, child would be 10px.`,
+    reference: `<a rel="noopener noreferrer" target="_blank" href="https://css-tricks.com/the-lengths-of-css/">CSS-TRICKS: Using SVG.</a>`,
+    id: 11,
   },
   { 
     logo: 'css',
-    question: 'what is redux',
-    answer: 'life',
-    reference: 'good vibes',
-    id: 4,
+    question: `What are the differences between visibility hidden and display none?`,
+    answer: `<strong>display: none</strong> removes the element from the normal layout flow and allow other elements to fill in. <strong>visibility: hidden</strong> tag is rendered, it takes space in the normal flow but doesn't show it.`,
+    reference: `<a rel="noopener noreferrer" target="_blank" href="http://www.vanseodesign.com/css/visibility-vs-display/">vanseodesign: Visibility vs Display.</a>`,
+    id: 12,
   },  { 
     logo: 'css',
-    question: 'what is es8',
-    answer: 'the future',
-    reference: 'mdn: es8',
-    id: 1,
+    question: `Does <strong>overflow: hidden</strong> create a new block formatting context?`,
+    answer: `Yes. Overflow property deals with the content if content size exceeds the allocated size for the content. You can make extra content visible, hidden, scroll or auto (viewport default behavior).`,
+    reference: `<a rel="noopener noreferrer" target="_blank" href="https://css-tricks.com/the-css-overflow-property/">CSS-TRICKS: The css overflow property</a>
+    <br/><a rel="noopener noreferrer" target="_blank" href="LINK">SOURCE: ARTICLE</a>`,
+    id: 13,
   },
   { 
     logo: 'css',
-    question: 'what is this',
-    answer: 'no idea',
-    reference: 'every programmer',
-    id: 2,
+    question: `How could you apply css rules specific to a media?`,
+    answer: `@media (max-width: 700px){...} means you want to apply rules to those media whose max-width is 700px. This means that every smaller device will have this rule.`,
+    reference: `<a rel="noopener noreferrer" target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries">MDN: Media queries</a>
+    <br/><a rel="noopener noreferrer" target="_blank" href="LINK">SOURCE: ARTICLE</a>`,
+    id: 14,
   },
   { 
     logo: 'css',
-    question: 'what is destructuring',
-    answer: 'deleting life',
-    reference: 'good vibes',
-    id: 3,
+    question: `What are some of the pseudo classes you have used?`,
+    answer: `Pseudo classes describe a specific state of an element and allow to style element dynamically. The most popular one is :hover. Besides, I have used :visited, :focus, :nth-child, nth-of-type, :link, etc.`,
+    reference: `<a rel="noopener noreferrer" target="_blank" href="https://css-tricks.com/pseudo-class-selectors/">CSS-TRICKS: Pseudo class selectors</a>`,
+    id: 15,
   },
   { 
     logo: 'css',
-    question: 'what is redux',
-    answer: 'life',
-    reference: 'good vibes',
-    id: 4,
+    question: `What are pseudo elements?`,
+    answer: `Pseudo elements help you to add cosmetics contents. Pseudo elements generates content where as pseudo class deals with state of the element`,
+    reference: `<a rel="noopener noreferrer" target="_blank" href="http://nicolasgallagher.com/an-introduction-to-css-pseudo-element-hacks/">nicolasgallagher: An introduction to css pseudo element hacks</a>
+    <br/><a rel="noopener noreferrer" target="_blank" href="https://css-tricks.com/css-content/">CSS-TRICKS: CSS content</a>`,
+    id: 16,
   },  
+  { 
+    logo: 'css',
+    question: `How do you align a p center-center inside a div?`,
+    answer: `ANSWER`,
+    reference: `<a rel="noopener noreferrer" target="_blank" href="LINK">SOURCE: ARTICLE</a>
+    <br/><a rel="noopener noreferrer" target="_blank" href="LINK">SOURCE: ARTICLE</a>`,
+    id: 17,
+  },  
+  { 
+    logo: 'css',
+    question: `What is specificity? How do you calculate specificity?`,
+    answer: `Specificity is a process of determining which css rule will be applied to an element. It determines which rules will take precedence.`,
+    reference: `<a rel="noopener noreferrer" target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">MDN: Specificity</a>
+    <br/><a rel="noopener noreferrer" target="_blank" href="https://specificity.keegan.st/">Keegan: Specificity Calculator</a>`,
+    id: 18,
+  },  
+  // { 
+  //   logo: 'css',
+  //   question: `QUESTION`,
+  //   answer: `ANSWER`,
+  //   reference: `<a rel="noopener noreferrer" target="_blank" href="LINK">SOURCE: ARTICLE</a>
+  //   <br/><a rel="noopener noreferrer" target="_blank" href="LINK">SOURCE: ARTICLE</a>`,
+  //   id: 0000,
+  // },  
 ]
 
 module.exports.css = css
