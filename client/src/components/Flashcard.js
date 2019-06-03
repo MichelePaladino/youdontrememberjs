@@ -12,12 +12,12 @@ class Flashcard extends Component {
 
 	render() {
 			return (
-			<div className='flashcard' onClick={() => this.setState({answered: true})}>
+			<div className='flashcard' onClick={() => this.setState({answered: !this.state.answered})}>
 					<div className='flashcard__text'>
 						<div className='flashcard__title' dangerouslySetInnerHTML={{__html: this.props.question}}></div>
 						{this.state.answered && <hr/> }
-						{this.state.answered && <p  dangerouslySetInnerHTML={{__html: this.props.answer}}></p>}
-						{this.state.answered && <p dangerouslySetInnerHTML={{__html: this.props.reference}}></p>}
+						{this.state.answered && <p className='flashcard__answer' dangerouslySetInnerHTML={{__html: this.props.answer}}></p>}
+						{this.state.answered && <p className='flashcard__reference' dangerouslySetInnerHTML={{__html: this.props.reference}}></p>}
 						{/* <p>{this.state.answered && this.props.answer}</p> */}
 						{/* <p>{this.state.answered && this.props.reference}</p> */}
 					</div>

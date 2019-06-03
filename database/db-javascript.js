@@ -169,7 +169,7 @@ const javascript = [
   },
   { 
     logo: 'js',
-    question: `Explain Function.prototype.bind.`,
+    question: `Explain Function.prototype.bind`,
     answer: `Taken word-for-word from MDN:
     <br/>"The bind() method creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called".
     <br/><br/>
