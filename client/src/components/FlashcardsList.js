@@ -48,7 +48,8 @@ class FlashcardsList extends Component {
         <div className='load-more'>       
           <button className='load-more__button' onClick={() => {
           this.setState((currState) => ({batch: currState.batch + 6, toShuffle: false}));
-          sliceArray(this.state.arrayOfCards, this.state.batch, 6)
+          sliceArray(this.state.arrayOfCards, this.state.batch, 6);
+          window.scrollTo(0, 0)
           }}>LOAD MORE</button>
         </div>
       </div>
