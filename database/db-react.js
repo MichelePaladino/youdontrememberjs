@@ -106,8 +106,6 @@ const react = [
     answer: `A callback function which will be invoked when setState has finished and the component is re-rendered.
 
     <br/><br/>Something that’s not spoken of a lot is that setState is asynchronous, which is why it takes in a second callback function. Typically it’s best to use another lifecycle method rather than relying on this callback function, but it’s good to know it exists.`,
-    reference: `<a rel="noopener noreferrer" target="_blank" href="LINK">SOURCE: ARTICLE</a>
-    <br/><a rel="noopener noreferrer" target="_blank" href="LINK">SOURCE: ARTICLE</a>`,
     id: 12,
   },
   { 

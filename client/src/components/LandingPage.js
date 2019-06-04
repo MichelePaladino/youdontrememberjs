@@ -11,7 +11,7 @@ const LandingPage = (props) => {
           <div className="hero__title-box">
            <h1 className="hero__title">
             <span className="hero__title--main">Flashcards</span>
-            <span className="hero__title--sub">You will remember</span>
+            <span className="hero__title--sub">You will remember JavaScript</span>
            </h1>
           </div>
         </div>

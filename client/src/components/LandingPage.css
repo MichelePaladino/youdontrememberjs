@@ -1,8 +1,8 @@
 .hero {
-  height: 60vh;
+  height: 90vh;
   background-image: linear-gradient(to right bottom, rgba(46, 46, 46, 0.8), rgba(15, 24, 21, 0.9)), url(../assets/heromin.jpg);
   background-size: cover;
-  background-position: 0 20%;
+
   position: relative;
 }
 
@@ -23,8 +23,8 @@
   font-size: 7rem;
   letter-spacing: 1rem;
   animation-name: moveInTop;
-  animation-duration: 0.8s;
-  animation-timing-function: ease-out;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
 }
 
 .hero__title--sub {
@@ -32,8 +32,8 @@
   line-height: 100%;
   animation-name: moveInBot;
   font-size: 4rem;
-  animation-duration: 0.8s;
-  animation-timing-function: ease-out;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
 }
 
 
@@ -63,9 +63,7 @@
   .hero__title--sub {
     font-size: 3rem;
   }
-  .hero {
-    height: 40vh;
-  }
+ 
   .landing__main {
   grid-template-columns: 1fr;
   padding: 2rem 1.5rem;
@@ -83,19 +81,18 @@
   .hero__title--sub {
     font-size: 3rem;
   }
-  .hero {
-    height: 40vh;
-  }
+ 
 }
 
 @keyframes moveInTop {
     0% {
       opacity: 0;
-      transform: translateY(-6rem); 
+      transform: translateX(-14rem); 
     }
-    70% {
-      transform: translateY(1rem); 
+    20% {
+      opacity: 0;
     }
+
     100% {
       opacity: 1;
       transform: translate(0); 
@@ -104,11 +101,12 @@
 @keyframes moveInBot {
   0% {
     opacity: 0;
-    transform: translateY(6rem); 
+    transform: translateX(14rem); 
   }
-  70% {
-    transform: translateY(-1.1rem); 
+  20% {
+      opacity: 0;
   }
+
   100% {
     opacity: 1;
     transform: translate(0); 

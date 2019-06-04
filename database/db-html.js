@@ -5,7 +5,7 @@ const html = [
     answer: `DOCTYPE is an abbreviation for “document type”. It is a declaration used in HTML to distinguish between standards mode and quirks mode. Its presence tells the browser to render the web page in standards mode.
       <br/>Moral of the story - just add <!DOCTYPE html> at the start of your page.`,
     reference: `<a rel="noopener noreferrer" target="_blank" href="https://stackoverflow.com/questions/7695044/what-does-doctype-html-do">StackOverflow: What does doctype html do</a>
-    <br/><a rel="noopener noreferrer" target="_blank" href="https://www.w3.org/QA/Tips/Doctype">w3: Doctype</a>`,
+    <br/><a rel="noopener noreferrer" target="_blank" href="https://www.w3.org/QA/Tips/Doctype">w3.org: Doctype</a>`,
     id: 1,
   },
   { 
@@ -16,7 +16,7 @@ const html = [
     <br/><br/>When an HTTP request is made to a server, the requesting user agent usually sends information about language preferences, such as in the Accept-Language header. The server can then use this information to return a version of the document in the appropriate language if such an alternative is available. The returned HTML document should also declare the lang attribute in the &lt;html> tag, such as &lt;html lang="en">...&lt;/html>.
     
     <br/><br/>In the back end, the HTML markup will contain i18n placeholders and content for the specific language stored in YML or JSON formats. The server then dynamically generates the HTML page with content in that particular language, usually with the help of a back end framework.`,
-    reference: `<a rel="noopener noreferrer" target="_blank" href="LINK">w3: https://www.w3.org/International/getting-started/language</a>`,
+    reference: `<a rel="noopener noreferrer" target="_blank" href="LINK">w3.org: Language</a>`,
     id: 2,
   },
   { 
@@ -30,8 +30,7 @@ const html = [
     <li>Formatting dates and currencies - Calendar dates are sometimes presented in different ways. Eg. "May 31, 2012" in the U.S. vs. "31 May 2012" in parts of Europe.</li>
     <li>Do not concatenate translated strings - Do not do anything like "The date today is " + date. It will break in languages with different word order. Use a template string with parameters substitution for each language instead. For example, look at the following two sentences in English and Chinese respectively: I will travel on {% date %} and {% date %} 我会出发. Note that the position of the variable is different due to grammar rules of the language.</li>
     <li>Language reading direction - In English, we read from left-to-right, top-to-bottom, in traditional Japanese, text is read up-to-down, right-to-left.</li>`,
-    reference: `<a rel="noopener noreferrer" target="_blank" href="https://www.quora.com/What-kind-of-things-one-should-be-wary-of-when-designing-or-developing-for-multilingual-sites">quota: Designing and developing for multilingual sites</a>
-    <br/><a rel="noopener noreferrer" target="_blank" href="LINK">SOURCE: ARTICLE</a>`,
+    reference: `<a rel="noopener noreferrer" target="_blank" href="https://www.quora.com/What-kind-of-things-one-should-be-wary-of-when-designing-or-developing-for-multilingual-sites">quora: Designing and developing for multilingual sites</a>`,
     id: 3,
   },
   { 
@@ -41,7 +40,7 @@ const html = [
 
     <br/><br/>These days, using data- attributes is not encouraged. One reason is that users can modify the data attribute easily by using inspect element in the browser. The data model is better stored within JavaScript itself and stay updated with the DOM via data binding possibly through a library or a framework.`,
     reference: `<a rel="noopener noreferrer" target="_blank" href="http://html5doctor.com/html5-custom-data-attributes/">html5doctor: HTML5 custom Data attributes</a>
-    <br/><a rel="noopener noreferrer" target="_blank" href="https://www.w3.org/TR/html5/dom.html#embedding-custom-non-visible-data-with-the-data-attributes">w3: Embedding custom non-visible data with the data- attributes</a>`,
+    <br/><a rel="noopener noreferrer" target="_blank" href="https://www.w3.org/TR/html5/dom.html#embedding-custom-non-visible-data-with-the-data-attributes">w3.org: Embedding custom non-visible data with the data- attributes</a>`,
     id: 4,
   },
   { 

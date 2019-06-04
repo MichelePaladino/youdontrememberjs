@@ -12,13 +12,17 @@
 
 .flashcard {
   /* max-width: 40vw; */
-  flex-basis: 100vw;
+  flex-basis: 95vw;
   box-shadow: 0px 5px 16px 0px rgba(0, 0, 0, 0.3);
   padding: 2rem;
   margin: 3rem;
 
   position: relative;
   cursor: pointer;
+}
+.flashcard:hover {
+  /* max-width: 40vw; */
+  box-shadow: 0px 5px 16px 0px rgba(0, 38, 255, 0.349);
 }
 
 /*.flashcard__answer, .flashcard__reference {
@@ -51,4 +55,12 @@
 }
 .flashcard__title {
   font-size: 2rem;
+}
+
+@media only screen and (max-width: 35rem) {
+  .flashcard {
+    padding: 1.7rem;
+    margin: 2rem;
+  
+  }
 }
