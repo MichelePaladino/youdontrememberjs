@@ -1,4 +1,4 @@
-# [You Don't Remember JavaScript &rtrie;](https://kine-pop.firebaseapp.com/)
+# [You Don't Remember JavaScript &rtrie;](https://ydrjs.herokuapp.com/)
 > Flashcards to memorize topics about Javascript, React, Redux, CSS and HTML
 
 Why "You Don't Remember JavaScript"?
